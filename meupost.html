@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #conteudo {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ff8aef;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #ff8aef;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            border: 1px solid #0f0f0f;
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div id="conteudo">
+    <h1>Meu post</h1>
+    <textarea id="texto" placeholder="Escreva Aqui..."></textarea>
+    <button onclick="salvarTexto()">Salvar</button>
+    <button onclick="editarTexto()">Editar</button>
+</div>
+
+<script>
+    function salvarTexto() {
+        // Obtém o texto do textarea
+        var texto = document.getElementById('texto').value;
+
+        // Salva o texto no Local Storage
+        localStorage.setItem('textoSalvo', texto);
+
+        // Exibe uma mensagem de confirmação
+        alert('Texto salvo com sucesso!');
+    }
+
+    function editarTexto() {
+        // Obtém o texto salvo do Local Storage
+        var textoSalvo = localStorage.getItem('textoSalvo');
+        console.log(textoSalvo)
+
+        // Se houver um texto salvo, preenche o textarea com ele
+        if (textoSalvo) {
+            document.getElementById('texto').value = textoSalvo;
+        } else {
+            alert('Nenhuma mensagem salva encontrada.');
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="texto.html">
+    <title>Comentários</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #conteudo {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .post {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .acao {
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="conteudo">
+    <h1>Comentários</h1>
+
+    <div class="post para Você">
+        <button class="acao" onclick="reagir('❤️')">❤️</button>
+        <button class="acao" onclick="reagir('👍')">👍</button>
+        <button class="acao" onclick="reagir('👏')">👏</button>
+        <button class="acao" onclick="comentar()">Comentar</button>
+    </div>
+
+    <div class="post">
+        <p><strong>Usuário 2:</strong> Que história incrível! Adorei cada palavra.</p>
+        <button class="acao" onclick="reagir('❤️')">❤️</button>
+        <button class="acao" onclick="reagir('👍')">👍</button>
+        <button class="acao" onclick="reagir('👏')">👏</button>
+        <button class="acao" onclick="comentar()">Comentar</button>
+    </div>
+
+    <!-- Adicione mais posts conforme necessário -->
+
+</div>
+
+<script>
+    function reagir(emoji) {
+        alert('Você reagiu com: ' + emoji);
+    }
+
+    function comentar() {
+        var comentario = prompt('Digite seu comentário:');
+        if (comentario) {
+            alert('Você comentou: ' + comentario);
+        }
+    }
+</script>
+
+</body>
+</html>
