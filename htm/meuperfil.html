@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="/htm/corpo.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .perfil {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Para centralizar a imagem */
+        }
+
+        .nome-usuario {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .username {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .seguidores {
+            margin-bottom: 20px;
+        }
+
+        .botao-seguir {
+            padding: 8px 16px;
+            background-color: #1da1f2;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .botao-parar-seguir {
+            padding: 8px 16px;
+            background-color: #35dc5f;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .botao-voltar {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ccc;
+            color: #333;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .botao-voltar:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="perfil">
+    <img class="foto-perfil" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBkcrENhy3FeDDM_vQZOs9aqIUOAPSFQsYHV__H87u7A&s" alt="Foto de Perfil">
+    <div class="nome-usuario">Nome do Usuário</div>
+    <div class="username">@username</div>
+    <div class="seguidores" id="seguidores">1000 Seguidores</div>
+    <button id="btnSeguir" class="botao-seguir" onclick="alterarSeguir()">Seguir</button>
+    <button class="botao-voltar" onclick="voltarTelaInicial()">Voltar para Tela Inicial</button>
+</div>
+
+<script>
+    var seguindo = false;
+    var numSeguidores = 1000;
+
+    function alterarSeguir() {
+        var botaoSeguir = document.getElementById("btnSeguir");
+        var seguidoresElement = document.getElementById("seguidores");
+
+        if (!seguindo) {
+            if (confirm("Deseja seguir este usuário?")) {
+                numSeguidores++;
+                seguidoresElement.textContent = numSeguidores + " Seguidores";
+                botaoSeguir.textContent = "Seguindo";
+                botaoSeguir.classList.remove("botao-seguir");
+                botaoSeguir.classList.add("botao-parar-seguir");
+                botaoSeguir.setAttribute("onclick", "pararSeguir()");
+                seguindo = true;
+            }
+        } else {
+            pararSeguir();
+        }
+    }
+
+    function pararSeguir() {
+        var botaoSeguir = document.getElementById("btnSeguir");
+        var seguidoresElement = document.getElementById("seguidores");
+
+        if (confirm("Deseja parar de seguir este usuário?")) {
+            numSeguidores--;
+            seguidoresElement.textContent = numSeguidores + " Seguidores";
+            botaoSeguir.textContent = "Seguir";
+            botaoSeguir.classList.remove("botao-parar-seguir");
+            botaoSeguir.classList.add("botao-seguir");
+            botaoSeguir.setAttribute("onclick", "alterarSeguir()");
+            seguindo = false;
+        }
+    }
+
+    function voltarTelaInicial() {
+        window.location.href = "corpo.html"; // Substitua "index.html" pelo nome da sua página inicial
+    }
+</script>
+
+</body>
+</html>

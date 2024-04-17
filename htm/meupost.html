@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu post</title>
+    <link rel="stylesheet" href="/htm/corpo.html">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 40px;
         }
 
         #conteudo {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #ff8aef;
+            padding: 40px;
+            background-color: #0c84db;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -26,7 +27,7 @@
 
         p {
             line-height: 1.6;
-            color: #ff8aef;
+            color: #0c84db;
         }
 
         textarea {
@@ -41,7 +42,7 @@
 
         button {
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #33b300;
             color: white;
             border: none;
             border-radius: 4px;
@@ -50,7 +51,20 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #33b300;
+        }
+        .botao-voltar {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ccc;
+            color: #333;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .botao-voltar:hover {
+            background-color: #999;
         }
     </style>
 </head>
@@ -61,6 +75,7 @@
     <textarea id="texto" placeholder="Escreva Aqui..."></textarea>
     <button onclick="salvarTexto()">Salvar</button>
     <button onclick="editarTexto()">Editar</button>
+    <button class="botao-voltar" onclick="voltarTelaInicial()">Voltar para Tela Inicial</button>
 </div>
 
 <script>
@@ -86,6 +101,9 @@
         } else {
             alert('Nenhuma mensagem salva encontrada.');
         }
+    }
+    function voltarTelaInicial() {
+        window.location.href = "corpo.html"; // Substitua "index.html" pelo nome da sua página inicial
     }
 </script>
 
