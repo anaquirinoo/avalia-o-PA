@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu post</title>
     <link rel="stylesheet" href="/htm/corpo.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -53,17 +54,17 @@
         button:hover {
             background-color: #33b300;
         }
-        .botao-voltar {
-            margin-top: 20px;
-            padding: 10px 20px;
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
             background-color: #ccc;
-            color: #333;
             border: none;
-            border-radius: 20px;
+            border-radius: 50%;
+            padding: 10px;
             cursor: pointer;
         }
-
-        .botao-voltar:hover {
+        .back-button:hover {
             background-color: #999;
         }
     </style>
@@ -75,8 +76,9 @@
     <textarea id="texto" placeholder="Escreva Aqui..."></textarea>
     <button onclick="salvarTexto()">Salvar</button>
     <button onclick="editarTexto()">Editar</button>
-    <button class="botao-voltar" onclick="voltarTelaInicial()">Voltar para Tela Inicial</button>
 </div>
+
+<button class="back-button" onclick="voltarTelaInicial()"><i class="fas fa-arrow-left"></i></button>
 
 <script>
     function salvarTexto() {
@@ -106,6 +108,7 @@
         window.location.href = "corpo.html"; // Substitua "index.html" pelo nome da sua página inicial
     }
 </script>
+<script src="/js/corpo.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.container {
+    margin-top: 30px;
+}
+.tab-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.metric {
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 0;
+}
+.metric h2 {
+    margin-bottom: 10px;
+    color: #495057;
+}
+.metric p {
+    font-size: 18px;
+    color: #6c757d;
+}
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+.back-button:hover {
+    background-color: #999;
+}

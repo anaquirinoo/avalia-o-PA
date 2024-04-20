@@ -4,132 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="/css/meuperfil.css">
     <link rel="stylesheet" href="/htm/corpo.html">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .perfil {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Para centralizar a imagem */
-        }
-
-        .nome-usuario {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .username {
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .seguidores {
-            margin-bottom: 20px;
-        }
-
-        .botao-seguir {
-            padding: 8px 16px;
-            background-color: #1da1f2;
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .botao-parar-seguir {
-            padding: 8px 16px;
-            background-color: #35dc5f;
-            color: #fff;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .foto-perfil {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .botao-voltar {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #ccc;
-            color: #333;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .botao-voltar:hover {
-            background-color: #999;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
 <div class="perfil">
     <img class="foto-perfil" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBkcrENhy3FeDDM_vQZOs9aqIUOAPSFQsYHV__H87u7A&s" alt="Foto de Perfil">
-    <div class="nome-usuario">Nome do Usuário</div>
-    <div class="username">@username</div>
+    <div class="nome-usuario">Ana Quirino</div>
+    <div class="username">@anaquirino</div>
     <div class="seguidores" id="seguidores">1000 Seguidores</div>
     <button id="btnSeguir" class="botao-seguir" onclick="alterarSeguir()">Seguir</button>
-    <button class="botao-voltar" onclick="voltarTelaInicial()">Voltar para Tela Inicial</button>
 </div>
 
-<script>
-    var seguindo = false;
-    var numSeguidores = 1000;
+<button class="botao-voltar" onclick="voltarTelaInicial()"><i class="fas fa-arrow-left"></i></button>
 
-    function alterarSeguir() {
-        var botaoSeguir = document.getElementById("btnSeguir");
-        var seguidoresElement = document.getElementById("seguidores");
+<h2 class="titulo-post">MEUS POST:</h2>
 
-        if (!seguindo) {
-            if (confirm("Deseja seguir este usuário?")) {
-                numSeguidores++;
-                seguidoresElement.textContent = numSeguidores + " Seguidores";
-                botaoSeguir.textContent = "Seguindo";
-                botaoSeguir.classList.remove("botao-seguir");
-                botaoSeguir.classList.add("botao-parar-seguir");
-                botaoSeguir.setAttribute("onclick", "pararSeguir()");
-                seguindo = true;
-            }
-        } else {
-            pararSeguir();
-        }
-    }
+<div class="post">
+    <p><strong>@anaquirino:</strong> Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Atirei o pau no gatis, per gatis num morreus. Copo furadis é disculpa de bebadis, arcu quam euismod magna. Si num tem leite então bota uma pinga aí cumpadi!
+    Diuretics paradis num copo é motivis de denguis. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo! Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Casamentiss faiz malandris se pirulitá.
+    A ordem dos tratores não altera o pão duris. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Per aumento de cachacis, eu reclamis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. </p>
+    <button class="acao" onclick="reagir('❤️')">❤️</button>
+    <button class="acao" onclick="reagir('👍')">👍</button>
+    <button class="acao" onclick="reagir('👏')">👏</button>
+    <button class="botao-dashboard" onclick="irParaDashboard()">Dashboard</button>
+    <div class="post-info">Postado em: 20 de abril de 2024</div>
+</div>
 
-    function pararSeguir() {
-        var botaoSeguir = document.getElementById("btnSeguir");
-        var seguidoresElement = document.getElementById("seguidores");
-
-        if (confirm("Deseja parar de seguir este usuário?")) {
-            numSeguidores--;
-            seguidoresElement.textContent = numSeguidores + " Seguidores";
-            botaoSeguir.textContent = "Seguir";
-            botaoSeguir.classList.remove("botao-parar-seguir");
-            botaoSeguir.classList.add("botao-seguir");
-            botaoSeguir.setAttribute("onclick", "alterarSeguir()");
-            seguindo = false;
-        }
-    }
-
-    function voltarTelaInicial() {
-        window.location.href = "corpo.html"; // Substitua "index.html" pelo nome da sua página inicial
-    }
-</script>
+<script src="/js/meuperfil.js"></script>
 
 </body>
 </html>

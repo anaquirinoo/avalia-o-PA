@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="metrics-tab" data-toggle="tab" href="#metrics" role="tab" aria-controls="metrics" aria-selected="true">Métricas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="chart-tab" data-toggle="tab" href="#chart" role="tab" aria-controls="chart" aria-selected="false">Gráficos</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="metrics" role="tabpanel" aria-labelledby="metrics-tab">
+                <div class="metric">
+                    <h2>Pessoas que visualizaram o post:</h2>
+                    <p id="views">0</p>
+                </div>
+                <div class="metric">
+                    <h2>Seguidores:</h2>
+                    <p id="followers">0</p>
+                </div>
+                <div class="metric">
+                    <h2>Não Seguidores:</h2>
+                    <p id="non-followers">0</p>
+                </div>
+                <div class="metric">
+                    <h2>Pessoas que compartilharam o post:</h2>
+                    <p id="shares">0</p>
+                </div>
+                <div class="metric">
+                    <h2>Pessoas que curtiram o post:</h2>
+                    <p id="likes">0</p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="chart" role="tabpanel" aria-labelledby="chart-tab">
+                <canvas id="myChart" width="40" height="20"></canvas>
+            </div>
+            
+        </div>
+    </div>
+    <button class="back-button" onclick="voltarTelaInicial()"><i class="fas fa-arrow-left"></i></button>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/dashboard.js"></script>
+    </script>
+ 
+</body>
+</html>
