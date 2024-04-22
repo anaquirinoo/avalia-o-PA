@@ -8,92 +8,91 @@
 /* Estilos para o corpo da página */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #e2dada;
+    background-color: #f5f5f5; /* Alterando a cor de fundo */
 }
 
 /* Estilos para o cabeçalho */
 header {
     background-color: #0d4161;
     color: #fff;
-    padding: 15px 0;
+    padding: 20px 0; /* Aumentando o padding */
     text-align: center;
-    font-size: 24px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-radius: 50px;
+    font-size: 32px; /* Aumentando o tamanho da fonte */
+    border-top-left-radius: 10px; /* Ajustando o raio das bordas */
+    border-top-right-radius: 10px;
 }
 
 /* Estilos para a barra de navegação */
 nav {
     background-color: #1da1f2;
     color: #fff;
-    padding: 8px;
+    padding: 15px;
     text-align: center;
-    font-size: 18px;
-    border-radius: 50px;
+    font-size: 20px; /* Aumentando o tamanho da fonte */
+    border-radius: 10px; /* Ajustando o raio das bordas */
 }
 
 nav a {
-    display: block;
+    display: inline-block; /* Alterando para exibir os links em linha */
     color: #fff;
     text-decoration: none;
-    margin: 10px 0;
+    margin: 0 15px; /* Aumentando a margem */
 }
 
 /* Estilos para o container principal */
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    max-width: 900px; /* Aumentando a largura máxima */
+    margin: 30px auto; /* Aumentando a margem */
+    padding: 30px; /* Aumentando o padding */
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Aumentando a suavidade da sombra */
 }
 
 /* Estilos para os posts */
 .post {
-    background-color: #f5f8fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+    background-color: #f9f9f9; /* Alterando a cor de fundo */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumentando a suavidade da sombra */
+    padding: 25px; /* Aumentando o padding */
+    margin-bottom: 30px; /* Aumentando a margem inferior */
 }
 
 /* Estilos para os títulos */
 h1 {
     color: #1da1f2;
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 28px; /* Aumentando o tamanho da fonte */
+    margin-bottom: 25px; /* Aumentando a margem inferior */
 }
 
 /* Estilos para os parágrafos */
 p {
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    color: #555; /* Alterando a cor do texto */
+    line-height: 1.8; /* Aumentando o espaçamento entre linhas */
+    margin-bottom: 25px; /* Aumentando a margem inferior */
 }
 
 /* Estilos para a área de comentários */
 textarea {
-    width: calc(100% - 40px);
-    min-height: 100px;
+    width: calc(100% - 20px); /* Ajustando a largura */
+    min-height: 120px; /* Aumentando a altura mínima */
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 18px; /* Aumentando o tamanho da fonte */
+    margin-bottom: 25px;
     resize: vertical;
 }
 
 /* Estilos para os botões */
 button {
-    padding: 10px 20px;
+    padding: 12px 24px; /* Aumentando o padding */
     background-color: #1da1f2;
     color: #fff;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px; /* Aumentando o raio das bordas */
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px; /* Aumentando o tamanho da fonte */
     transition: background-color 0.3s ease;
 }
 
